@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Generator</title>
+</head>
+<body>
+    <h1>QR Code Generator</h1>
+    <form method="post" action="{% url 'generate_qr' %}">
+        {% csrf_token %}
+        <input type="text" name="data" placeholder="Enter data" required>
+        <button type="submit">Generate QR Code</button>
+    </form>
+</body>
+</html>
